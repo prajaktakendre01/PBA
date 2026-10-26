@@ -1,0 +1,16 @@
+import re
+
+with open("addresses.txt", "r") as file:
+    text = file.read()
+
+pattern = r'\b[1-9]\d{5}\b'
+pins = re.findall(pattern, text)
+
+print("Valid PIN Codes:")
+for pin in pins:
+    print(pin)
+```
+
+Sample Input File (`addresses.txt`):
+
+
